@@ -3,15 +3,15 @@ import React from "react";
 import { Platform } from "react-native";
 
 import { HapticTab } from "~/components/HapticTab";
-import { IconSymbol } from "~/components/ui/IconSymbol";
-import TabBarBackground from "~/components/ui/TabBarBackground";
-import { colors } from "~/lib/constants/Colors";
+import { IconSymbol } from "~/components/native/icon-symbol";
+import TabBarBackground from "~/components/native/tab-bar-background";
+import { colors } from "~/lib/constants/colors";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: colors["light"].tint,
+        tabBarActiveTintColor: colors.tint,
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
@@ -34,7 +34,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="habit/index"
+        name="habit"
         options={{
           title: "Habit",
           tabBarIcon: ({ color }) => (

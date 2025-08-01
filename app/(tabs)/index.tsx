@@ -1,15 +1,15 @@
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Image } from "expo-image";
 import { ScrollView, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
-import { HelloWave } from "~/components/HelloWave";
-import { ThemedText } from "~/components/ThemedText";
-import { ThemedView } from "~/components/ThemedView";
 import { useRouter } from "expo-router";
-import { DayProgress } from "~/components/day-progress";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
+import { DayProgress } from "~/components/day-progress";
 import { Habit } from "~/components/habit";
+import { HelloWave } from "~/components/HelloWave";
+import { Text } from "~/components/ui/text";
+import { colors } from "~/lib/constants/colors";
 
 const checkIns = [
   {
@@ -84,28 +84,27 @@ export default function HomeScreen() {
     <SafeAreaProvider>
       <SafeAreaView className="flex-1 bg-[#F4F2F1]">
         <ScrollView contentContainerClassName="px-5">
-          <ThemedView className="flex-row items-center justify-between mb-4">
-            <ThemedView className="flex-row items-center gap-5">
+          <View className="flex-row items-center justify-between mb-4">
+            <View className="flex-row items-center gap-5">
               <Image
-                source={require("@/assets/images/avatar.png")}
+                source={require("~/assets/images/avatar.png")}
                 style={{ width: 50, height: 50 }}
               />
-              <ThemedView className="flex-row items-center gap-2">
-                <ThemedText>Today</ThemedText>
+              <View className="flex-row items-center gap-2">
+                <Text>Today</Text>
                 <HelloWave />
-              </ThemedView>
-            </ThemedView>
+              </View>
+            </View>
             {/* TODO: add to tw config -> colors.palette.primary600, */}
-            <View className="bg-[#A54F31] w-10 h-10 items-center justify-center rounded-full">
+            <View className="bg-[#C76542] w-10 h-10 items-center justify-center rounded-full">
               <MaterialCommunityIcons
                 name="plus"
-                color="#FFFFFF"
-                // color={colors.palette.neutral100}
+                color={colors.palette.neutral100}
                 size={28}
                 onPress={() => router.push("/(tabs)/habit/new")}
               />
             </View>
-          </ThemedView>
+          </View>
 
           <View className="flex-row gap-6">
             <DayProgress day="Mon" date="1" progress={50} />
@@ -118,7 +117,7 @@ export default function HomeScreen() {
           </View>
 
           <View className="gap-4 mt-5">
-            <ThemedText>Daily check-in</ThemedText>
+            <Text>Daily check-in</Text>
             <View className="mt-2">
               <ScrollView
                 contentContainerClassName="gap-5"
@@ -132,11 +131,9 @@ export default function HomeScreen() {
                   >
                     <View className="flex-row items-center gap-2">
                       <View className="bg-[#F4F2F1] w-12 h-12 rounded-full items-center justify-center">
-                        <ThemedText className="text-center">
-                          {checkIn.emoji}
-                        </ThemedText>
+                        <Text className="text-center">{checkIn.emoji}</Text>
                       </View>
-                      <ThemedText>{checkIn.title}</ThemedText>
+                      <Text>{checkIn.title}</Text>
                     </View>
                     <AnimatedCircularProgress
                       size={100}
@@ -149,8 +146,8 @@ export default function HomeScreen() {
                     >
                       {() => (
                         <View className="items-center">
-                          <ThemedText>{checkIn.amount}</ThemedText>
-                          <ThemedText>{checkIn.name}</ThemedText>
+                          <Text>{checkIn.amount}</Text>
+                          <Text>{checkIn.name}</Text>
                         </View>
                       )}
                     </AnimatedCircularProgress>
@@ -160,7 +157,7 @@ export default function HomeScreen() {
                         color="#978F8A"
                         size={20}
                       />
-                      <ThemedText className="text-[#978F8A]">|</ThemedText>
+                      <Text className="text-[#978F8A]">|</Text>
                       <MaterialCommunityIcons
                         name="plus"
                         color="#978F8A"
@@ -174,7 +171,7 @@ export default function HomeScreen() {
           </View>
 
           <View className="gap-6">
-            <ThemedText>Today</ThemedText>
+            <Text>Today</Text>
             <View className="gap-2.5">
               {tasks.map((task, idx) => (
                 <Habit key={`${task.id}-${idx}`} task={task} />

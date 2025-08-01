@@ -1,6 +1,6 @@
 import { View, TouchableOpacity } from "react-native";
-import { ThemedText } from "./ThemedText";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { Text } from "./ui/text";
 
 interface HabitType {
   id: number;
@@ -44,12 +44,12 @@ export function Habit({ task }: HabitProps) {
       >
         <View className="flex-row gap-4">
           <View className="bg-[#F4F2F1] w-11 h-11 rounded-full items-center justify-center">
-            <ThemedText className="text-center">{task.emoji}</ThemedText>
+            <Text className="text-center">{task.emoji}</Text>
           </View>
 
           <View style={{}}>
-            <ThemedText>{task.name}</ThemedText>
-            <ThemedText className="text-[#564E4A]">{`start at ${task.time}`}</ThemedText>
+            <Text>{task.name}</Text>
+            <Text className="text-[#564E4A]">{`start at ${task.time}`}</Text>
           </View>
         </View>
         {/* TODO: use ios icons packages */}

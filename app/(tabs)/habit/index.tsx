@@ -1,5 +1,5 @@
-import { ThemedText } from "~/components/ThemedText";
+import { Text } from "~/components/ui/text";
 
 export default function HabitPage() {
-  return <ThemedText>View Habit</ThemedText>;
+  return <Text>View Habit</Text>;
 }

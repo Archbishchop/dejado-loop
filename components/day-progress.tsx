@@ -1,7 +1,8 @@
 import { View } from "react-native";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 
-import { ThemedText } from "./ThemedText";
+import { colors } from "~/lib/constants/colors";
+import { Text } from "./ui/text";
 
 interface DayCardProps {
   day: string;
@@ -12,16 +13,16 @@ interface DayCardProps {
 export function DayProgress({ day, date, progress }: DayCardProps) {
   return (
     <View className="gap-2">
-      <ThemedText>{day}</ThemedText>
+      <Text className="text-primary font-bold">{day}</Text>
       <AnimatedCircularProgress
         size={32}
         width={3}
         fill={progress}
-        // tintColor={colors.palette.primary400}
-        tintColor="#D28468"
+        tintColor={colors.tint}
+        // tintColor="#D28468"
         backgroundColor="#fff"
       >
-        {() => <ThemedText>{date}</ThemedText>}
+        {() => <Text>{date}</Text>}
       </AnimatedCircularProgress>
     </View>
   );
