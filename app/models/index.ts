@@ -1,4 +1,7 @@
 export * from "./RootStore"
+export * from "./HabitStore"
+export * from "./HabitModel"
+export * from "./UserModel"
 export * from "./helpers/getRootStore"
 export * from "./helpers/useStores"
 export * from "./helpers/setupRootStore"
