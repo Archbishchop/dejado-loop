@@ -83,16 +83,22 @@ export const paymentsService = {
   },
 }
 
-// ─── v2: Real RevenueCat SDK — uncomment when ready ──────────────────────────
+// ─── v2: Real RevenueCat SDK ─────────────────────────────────────────────────
+// Run: npx expo install react-native-purchases
+// Then uncomment the block below and remove the v1 mock above.
 //
 // import Purchases, { LOG_LEVEL, PurchasesPackage } from "react-native-purchases"
 // import { Platform } from "react-native"
 //
+// /**
+//  * Call this once at app startup (in app.tsx before rendering InnerApp).
+//  * Pass the Firebase UID once the user is authenticated.
+//  */
 // export const initRevenueCat = (userId?: string) => {
-//   Purchases.setLogLevel(LOG_LEVEL.VERBOSE)
+//   Purchases.setLogLevel(__DEV__ ? LOG_LEVEL.VERBOSE : LOG_LEVEL.ERROR)
 //   Purchases.configure({
 //     apiKey: Platform.OS === "ios" ? REVENUECAT_API_KEYS.ios : REVENUECAT_API_KEYS.android,
-//     appUserID: userId,
+//     appUserID: userId, // ties purchases to Firebase UID
 //   })
 // }
 //
@@ -102,6 +108,7 @@ export const paymentsService = {
 //     return RC_ENTITLEMENTS.PRO in info.entitlements.active
 //   },
 //
+//   // Returns the current RevenueCat offering (3 packages: monthly, annual, lifetime)
 //   async getOfferings() {
 //     const offerings = await Purchases.getOfferings()
 //     return offerings.current?.availablePackages ?? []
