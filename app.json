@@ -1,17 +1,17 @@
 {
-  "name": "Habit Tracker",
-  "displayName": "Habit Tracker",
+  "name": "DejaDo Loop",
+  "displayName": "DejaDo Loop",
   "expo": {
-    "name": "Habit Tracker",
-    "slug": "habittracker",
-    "scheme": "habittracker",
+    "name": "DejaDo Loop",
+    "slug": "dejado-loop",
+    "scheme": "dejadoloop",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/app-icon-all.png",
     "splash": {
       "image": "./assets/images/splash-logo-all.png",
       "resizeMode": "contain",
-      "backgroundColor": "#191015"
+      "backgroundColor": "#0D1B2A"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,7 +20,7 @@
     "assetBundlePatterns": ["**/*"],
     "android": {
       "icon": "./assets/images/app-icon-android-legacy.png",
-      "package": "com.habittracker",
+      "package": "com.dejadoloop",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
         "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
@@ -28,18 +28,18 @@
       "splash": {
         "image": "./assets/images/splash-logo-android-universal.png",
         "resizeMode": "contain",
-        "backgroundColor": "#191015"
+        "backgroundColor": "#0D1B2A"
       }
     },
     "ios": {
       "icon": "./assets/images/app-icon-ios.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.habittracker",
+      "bundleIdentifier": "com.dejadoloop",
       "splash": {
         "image": "./assets/images/splash-logo-ios-mobile.png",
         "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
         "resizeMode": "contain",
-        "backgroundColor": "#191015"
+        "backgroundColor": "#0D1B2A"
       }
     },
     "web": {
@@ -47,7 +47,7 @@
       "splash": {
         "image": "./assets/images/splash-logo-web.png",
         "resizeMode": "contain",
-        "backgroundColor": "#191015"
+        "backgroundColor": "#0D1B2A"
       },
       "bundler": "metro"
     },
@@ -72,7 +72,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "f12845f7-c2fb-44ea-97e8-db2816a8be8a"
+        "projectId": ""
       }
     }
   },
