@@ -60,9 +60,11 @@ export const localDb = {
   },
 }
 
-// ─── v2: Firestore (cloud sync) — uncomment when Firebase is configured ───────
-//
-// import { initializeApp } from "firebase/app"
+// ─── v2: Firestore (cloud sync) ──────────────────────────────────────────────
+// Firebase is configured. Install the SDK then uncomment:
+//   npx expo install firebase
+
+// import { initializeApp, getApps } from "firebase/app"
 // import {
 //   getFirestore,
 //   doc,
@@ -75,8 +77,8 @@ export const localDb = {
 // } from "firebase/firestore"
 // import { FIREBASE_CONFIG, COLLECTIONS } from "./firebaseConfig"
 //
-// const app = initializeApp(FIREBASE_CONFIG)
-// const db = getFirestore(app)
+// if (!getApps().length) initializeApp(FIREBASE_CONFIG)
+// const db = getFirestore()
 //
 // export const cloudDb = {
 //   async saveHabit(uid: string, habit: HabitSnapshotIn) {

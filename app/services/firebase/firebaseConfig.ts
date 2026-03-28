@@ -16,13 +16,13 @@
 
 // ─── Paste your Firebase config here ─────────────────────────────────────────
 export const FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyAhXCW4KYp1I_1ozerw9hBRxnDxJZH95AE",
   authDomain: "dejado-loop.firebaseapp.com",
   projectId: "dejado-loop",
-  storageBucket: "dejado-loop.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID",
+  storageBucket: "dejado-loop.firebasestorage.app",
+  messagingSenderId: "905616690010",
+  appId: "1:905616690010:web:6381279795a4aecbd64163",
+  measurementId: "G-X4Y9EBKTPY",
 }
 
 // ─── Firestore collection names ───────────────────────────────────────────────
