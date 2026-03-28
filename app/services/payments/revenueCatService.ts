@@ -41,8 +41,8 @@
 // ─── Config ───────────────────────────────────────────────────────────────────
 
 export const REVENUECAT_API_KEYS = {
-  ios: "YOUR_RC_IOS_API_KEY",
-  android: "YOUR_RC_ANDROID_API_KEY",
+  ios: "appl_XdIXQTdeitWUtlQeAwctAljbaqn",
+  android: "goog_ZszDJJUdRsRlXoarLBXYHhLkcjZ",
 }
 
 export const RC_ENTITLEMENTS = {
